@@ -3,5 +3,7 @@ def stringify(node):
     while node:
         result += f"{node.data} -> "
         node = node.next
+    
+    result += 'None'
 
     return result
