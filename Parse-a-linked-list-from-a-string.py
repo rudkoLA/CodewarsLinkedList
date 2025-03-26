@@ -6,6 +6,8 @@ def linked_list_from_string(s):
 
     head = None
 
+    data.pop(0)
+
     for item in data:
         head = Node(item, head)
 
