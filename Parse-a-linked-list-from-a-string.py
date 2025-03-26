@@ -1,12 +1,12 @@
 def linked_list_from_string(s):
-    data = list(reversed(s.split(' -> ')))
+    data = s.split(' -> ')[::-1]
 
     if " -> " not in s or not data:
         return None
 
-    head = None
-
     data.pop(0)
+    data = map(lambda x: int(x) if x.isnumeric() else x, data)
+    head = None
 
     for item in data:
         head = Node(item, head)
