@@ -5,7 +5,7 @@ def get_nth(node, index):
         raise IndexError
 
     for _ in range(index):
-        if node is None:
+        if node.next is None:
             raise IndexError
 
         node = node.next
