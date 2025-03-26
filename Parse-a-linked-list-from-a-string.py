@@ -1,10 +1,10 @@
 def linked_list_from_string(s):
-    data = s.split(' -> ')
+    data = list(reversed(s.split(' -> ')))
 
     if " -> " not in s or not data:
         return None
 
-    head = Node(data[0])
+    head = None
 
     for item in data:
         head = Node(item, head)
