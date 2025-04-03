@@ -5,6 +5,11 @@ def sorted_insert(head, data):
 
         return mid_node
 
+    if head.next is None:
+        new_node = Node(data)
+        head.next = new_node
+        return head
+
     head.next = sorted_insert(head.next, data)
 
     return head
