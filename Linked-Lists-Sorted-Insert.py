@@ -1,4 +1,7 @@
 def sorted_insert(head, data):
+    if head is None:
+        return Node(data)
+
     if head.data >= data:
         mid_node = Node(data)
         mid_node.next = head
