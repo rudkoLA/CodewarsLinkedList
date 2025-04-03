@@ -14,5 +14,8 @@ def remove_duplicates(head):
         if prev.data == current.data:
             prev.next = current.next
             current = current.next
+        else:
+            prev = prev.next
+            current = current.next
 
     return head
