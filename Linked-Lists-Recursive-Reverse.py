@@ -13,7 +13,10 @@ def reverse(head):
         prev = current
         current = current.next
 
-    prev.next = None
+    try:
+        prev.next = None
+    except UnboundLocalError:
+        return Node(head.data)
 
     new = Node(current.data)
 
