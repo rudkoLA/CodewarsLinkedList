@@ -21,7 +21,8 @@ def swap_pairs(head):
         temp.next = current
         current.next = rest
 
-        prev.next = temp
+        if prev is not None:
+            prev.next = temp
 
         prev = current
         current = rest
