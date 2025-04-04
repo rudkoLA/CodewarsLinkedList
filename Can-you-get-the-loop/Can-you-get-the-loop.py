@@ -1,6 +1,6 @@
 def loop_size(node):
     tortoise = node
-    hare = node
+    hare = node.next
 
     while tortoise != hare:
         tortoise = tortoise.next
