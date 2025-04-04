@@ -1,14 +1,16 @@
 def loop_size(node):
-    all_nodes = []
+    tortoise = node
+    hare = node
 
-    while node not in all_nodes:
-        all_nodes.append(node)
-        node = node.next
+    while tortoise != hare:
+        tortoise = tortoise.next
+        hare = hare.next.next
 
-    all_nodes = []
+    count = 1
+    current = tortoise.next
 
-    while node not in all_nodes:
-        all_nodes.append(node)
-        node = node.next
+    while current != tortoise:
+        current = current.next
+        count += 1
 
-    return len(all_nodes)
+    return count
