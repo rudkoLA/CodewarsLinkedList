@@ -16,6 +16,7 @@ def alternating_split(head):
     last_second = second
 
     if head.next.next is None:
+        first.next = None
         return Context(first, second)
 
     switch = True
