@@ -2,12 +2,12 @@ class Node(object):
     def __init__(self, data=None):
         self.data = data
         self.next = None
-    
+
 class Context(object):
     def __init__(self, first, second):
         self.first = first
         self.second = second
-    
+
 def alternating_split(head):
     first = head
     second = head.next
@@ -33,7 +33,7 @@ def alternating_split(head):
         head = head.next
         switch = not switch
 
-    # last_first.next = None
-    # last_second.next = None
+    last_first.next = None
+    last_second.next = None
 
     return Context(first, second)
