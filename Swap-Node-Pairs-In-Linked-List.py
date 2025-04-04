@@ -3,6 +3,9 @@ class Node:
         self.next = next
 
 def swap_pairs(head):
+    if not head:
+        return head
+
     root = head.next
 
     prev = None
